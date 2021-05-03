@@ -139,9 +139,11 @@ tbody tr:nth-child(even) {
 }
 
 td {
-	padding: .66em;
+	--td-padding: .66em;
+	--td-img-hover-height: 100px;
 	position: relative;
-	height: calc(.66em + 100px);
+	padding: var(--td-padding);
+	height: calc(var(--td-img-hover-height) + var(--td-padding));
 }
 
 td img {
@@ -152,7 +154,7 @@ td img {
 }
 
 td img:hover {
-	height: 100px;
+	height: var(--td-img-hover-height);
 }
 
 td a {
@@ -245,6 +247,8 @@ footer p {
 	font-size: 24px;
 }
 
+/* ===== ===== ===== ===== ===== */
+/* ===== ===== ===== ===== ===== */
 
 @media screen and (max-width: 600px) {
 	html, body {
