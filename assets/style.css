@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css");
+
+:root {
+	--color1: teal;
+}
+
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100vh;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	font-family: 'Montserrat', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* ===== ===== ===== ===== ===== */
+/* ===== ===== ===== ===== ===== */
+
+header {
+	display: flex;
+	flex-direction: column;
+	color: white;
+}
+
+h1 {
+	display: grid;
+	place-items: center;
+	background: var(--color1);
+	font-size: 2.5rem;
+	padding: .33em .5em;
+}
+
+nav ul {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+nav li,
+nav a {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	place-items: center;
+}
+
+nav a {
+	padding: .75em;
+	background-image: radial-gradient(rgba(15,15,15, 1), rgba(25,25,25, .915));
+	color: white;
+}
+
+nav a:hover {
+	background-image: linear-gradient(rgba(70,70,70,1), rgba(85,85,85,.975));
+}
+
+/* ===== ===== ===== ===== ===== */
+/* ===== ===== ===== ===== ===== */
+
+h1, h2, h3 {
+	text-align: center;
+}
+
+h2, h3 {
+	margin-bottom: 1em;
+}
+
+/* ===== ===== ===== ===== ===== */
+/* ===== ===== ===== ===== ===== */
+
+main {
+	flex: 1;
+	padding: 1em;
+}
+
+main p {
+	margin-bottom: 1.05em;
+}
+
+/* ===== ===== ===== ===== ===== */
+/* ===== ===== ===== ===== ===== */
+
+form {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	padding: .85em;
+	width: 50%;
+	min-width: 50%;
+	border-radius: 5px;
+	background-color: var(--color1);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"] {
+	margin-bottom: .85em;
+	height: 2rem;
+	padding: .2em .33em;
+}
+
+input[type="submit"] {
+	cursor: pointer;
+}
+
+/* ===== ===== ===== ===== ===== */
+/* ===== ===== ===== ===== ===== */
+
+table {
+	margin-bottom: 1.2rem;
+}
+
+thead {
+	background-color: black;
+	color: white;
+}
+
+th {
+	padding: .5em;
+}
+
+tbody tr:nth-child(odd) {
+	background-color: rgb(240, 234, 234);
+}
+
+tbody tr:nth-child(even) {
+	background-color: lightgray;
+}
+
+td {
+	padding: .66em;
+	position: relative;
+	height: calc(.66em + 100px);
+}
+
+td img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+td img:hover {
+	height: 100px;
+}
+
+td a {
+	color: black;
+}
+
+/* ===== ===== ===== ===== ===== */
+/* ===== ===== ===== ===== ===== */
+
+button {
+	all: unset;
+	border-radius: 99999px;
+	background-image: linear-gradient(rgba(15, 5, 255, 1), rgba(15, 5, 255, .885));
+	color: white;
+	padding: .5em .75em;
+	cursor: pointer;
+	font-family: 'Courier New', Courier, monospace;
+	transition: box-shadow .2s linear;
+}
+
+button:hover {
+	box-shadow: 2px 5px 8px 3px rgb(136 133 133);
+}
+
+button:active {
+	transform: scale(.975);
+}
+
+.btn-red {
+	background-image: linear-gradient(rgb(255, 5, 5), rgba(255,5,5, .885));
+}
+
+/* ===== ===== ===== ===== ===== */
+/* ===== ===== ===== ===== ===== */
+
+a {
+	text-decoration: none;
+}
+
+p > a {
+	text-decoration: underline;
+}
+
+/* ===== ===== ===== ===== ===== */
+/* ===== ===== ===== ===== ===== */
+
+footer {
+	background-color: black;
+	color: white;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding: .66em;
+}
+
+footer > * {
+	width: 100%;
+}
+
+footer p {
+	text-align: center;
+	display: grid;
+	place-items: center;
+}
+
+#icons {
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#icons li {
+	height: 100%;
+	width: 100%;
+	display: grid;
+	place-items: center;
+}
+
+#icons a {
+	color: white;
+}
+
+#icons i {
+	font-size: 24px;
+}
+
+
+@media screen and (max-width: 600px) {
+	html, body {
+		min-width: 100vw;
+		width: fit-content;
+	}
+}

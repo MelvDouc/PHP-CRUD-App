@@ -1,0 +1,9 @@
+CREATE TABLE users (
+  id INT(11) PRIMARY KEY AUTO_INCREMENT,
+  username VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL,
+  pwd VARCHAR(255) NOT NULL,
+  avatar VARCHAR(100) NULL,
+  is_admin TINYINT NOT NULL,
+  register_date DATETIME NOT NULL
+);
