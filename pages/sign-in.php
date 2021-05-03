@@ -1,3 +1,8 @@
+<?php
+  if(checkSession("connected"))
+    exit("You're already logged in.");
+?>
+
 <h2>Sign In</h2>
 
 <form action="./processing.php?sign-in" method="POST">
