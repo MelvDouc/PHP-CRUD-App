@@ -178,7 +178,7 @@ button {
 }
 
 button:hover {
-	box-shadow: 2px 5px 8px 3px rgb(136 133 133);
+	box-shadow: 2px 5px 8px 3px rgb(136, 133, 133);
 }
 
 button:active {
