@@ -25,7 +25,9 @@
   <tbody>
     <?php while($user = $users->fetch()): extract($user); ?>
       <tr>
-        <td><?= $id ?></td>
+        <td class="id-link">
+          <a href="./?profile&id=<?= $id ?>"><?= $id ?></a>
+        </td>
         <td><?= $username ?></td>
         <td><?= $email ?></td>
         <td>

@@ -190,8 +190,10 @@ a {
 	text-decoration: none;
 }
 
-p > a {
+p > a,
+.id-link a {
 	text-decoration: underline;
+	color: blue;
 }
 
 /* ===== ===== ===== ===== ===== */
