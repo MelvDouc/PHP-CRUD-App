@@ -47,15 +47,15 @@
   </tbody>
 </table>
 
-<a href="./?update-profile"><button>Update Profile</button></a>
+<a href="./?update-profile<?php if(checkSession("is_admin")) echo "&id=$id"; ?>"><button>Update Profile</button></a>
 
 <?php if($id === $_SESSION["userID"]): ?>
   <a href="./?update-password"><button>Update Password</button></a>
   <a href="./processing.php?sign-out"><button>Log Out</button></a>
 <?php endif; ?>
 
-<?php if(!$_SESSION["is_admin"]) exit; ?>
-
-<a href="./processing.php?delete-account&id=<?= $user["id"] ?>">
-  <button class="btn-red">Delete Account</button>
-</a>
+<?php if(checkSession("is_admin")): ?>
+  <a href="./processing.php?delete-account&id=<?= $user["id"] ?>">
+    <button class="btn-red">Delete Account</button>
+  </a>
+<?php endif; ?>
