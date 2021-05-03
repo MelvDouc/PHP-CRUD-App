@@ -10,7 +10,7 @@
 
   <input type="password" name="pwd2" placeholder="Confirm password">
 
-  <input type="submit" value="Submit">
+  <button type="submit">Submit</button>
 
 </form>
 
