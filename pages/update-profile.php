@@ -35,6 +35,6 @@
   
   <input type="file" name="avatar">
   
-  <input type="submit" value="Submit">
+  <button type="submit">Submit</button>
 
 </form>
