@@ -17,15 +17,15 @@ if (!$user)
 extract($user);
 $imgSrc = (!$avatar) ? "default.jpg" : $avatar;
 
-$idForAdmin = new HTMLContent(checkSession("is_admin"), "&id=$id");
+$idForAdmin = new ConditionalContent(checkSession("is_admin"), "&id=$id");
 
-$userOnlyLinks = new HTMLContent(
+$userOnlyLinks = new ConditionalContent(
   $id === $_SESSION["userID"],
   "<a href='./?update-password'><button>Update Password</button></a>
     <a href='./processing.php?sign-out'><button>Log Out</button></a>",
 );
 
-$deleteAccountButton = new HTMLContent(
+$deleteAccountButton = new ConditionalContent(
   checkSession("is_admin"),
   "<a href='./processing.php?delete-account&id=$id'>
     <button class='btn-red'>Delete Account</button>
